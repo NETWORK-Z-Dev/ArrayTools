@@ -1,6 +1,6 @@
 {
   "name": "@hackthedev/arraytools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "As the name suggests its a small helpful library with a few helper functions to modify arrays and adding a match function that supports regex. Its really nothing all to special.",
   "license": "ISC",
   "author": "",
