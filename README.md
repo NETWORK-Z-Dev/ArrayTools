@@ -5,15 +5,11 @@ As the name suggests its a small helpful library with a few helper functions to 
 Here's a small example
 
 ```js
-const whitelist = new ArrayTools(); // or new Whitelist(your_array);
+let arr = []
+ArrayTools.addEntry(arr, 1);
+ArrayTools.matches(arr, "test");
 
-whitelist.addEntry("/login");
-whitelist.addEntry("/health");
-whitelist.addEntry(/^\/api\/public\/.+$/);
-whitelist.addEntry("/^\/static\//");
-
-whitelist.matches("/login");             // true
-whitelist.matches("/api/public/test");   // true
-whitelist.matches("/api/private/test");  // false		
+// merging arrays
+const merged = ArrayTools.merge(a, b, c); // imagine a,b,c lol im lazy
 ```
 

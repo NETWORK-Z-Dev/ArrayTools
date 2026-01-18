@@ -1,18 +1,15 @@
 export default class ArrayTools {
-    constructor(arr = []) {
-        this.arr = arr;
+    static addEntry(arr, value) {
+        arr.push(value);
+        return arr;
     }
 
-    addEntry(value) {
-        this.arr.push(value);
+    static removeEntry(arr, value) {
+        return arr.filter(v => v !== value);
     }
 
-    removeEntry(value) {
-        this.arr = this.arr.filter(v => v !== value);
-    }
-
-    matches(value) {
-        return this.arr.some(v => {
+    static matches(arr, value) {
+        return arr.some(v => {
             if (v instanceof RegExp) return v.test(value);
 
             if (typeof v === "string") {
@@ -31,8 +28,7 @@ export default class ArrayTools {
         });
     }
 
-
-    getArray() {
-        return this.arr;
+    static merge(...arrays) {
+        return arrays.flat();
     }
 }
